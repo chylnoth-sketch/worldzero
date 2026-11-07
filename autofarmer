@@ -14550,7 +14550,7 @@ local function ApplySafeMode(enabled)
 end
 SV.RefreshSafeMode=ApplySafeMode
 FirstTab:AddToggle("SafeModeToggle", {
-    Text = "TOGGLE SAFE MODE",
+    Text = "Prevention Mode",
     Default = true,
     Tooltip = "Block combat and autofarm outside dungeons.",
     Callback = ApplySafeMode
@@ -19158,7 +19158,7 @@ if IsWorld or IsDungeon then
                         PingForCap("Nightmare portal")
                     end
                 end
-            end -- for unloaded dungeons tan
+            end -- for unloaded dungeons tab
             if not SV.GuildTab then
                 local TotalPointData = GetScore:InvokeServer("G_POINTS22", 1)
                 local DailyPointData = Remotes:WaitForChild("Profile_GetOwnCollectionValue", math.huge):InvokeServer("GuildPointsEarnedToday")
